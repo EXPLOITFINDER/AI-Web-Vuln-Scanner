@@ -54,6 +54,10 @@ echo "OPENAI_API_KEY=your_api_key_here" > .env
 
 ```
 
+```bash
+python scanner.py -u https://example.com -d ./payloads/ -m 3
+```
+
 ```mermaid
 graph TD
     A[Target URL] --> B[Selenium Crawler]
@@ -67,7 +71,5 @@ graph TD
     H --> I
 ```
 
-```bash
-python scanner.py -u https://example.com -d ./payloads/ -m 3
-```
+
 
