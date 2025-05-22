@@ -52,8 +52,9 @@ pip install -r requirements.txt
 # Set your OpenAI API Key
 echo "OPENAI_API_KEY=your_api_key_here" > .env
 
----
+```
 
+```mermaid
 graph TD
     A[Target URL] --> B[Selenium Crawler]
     B --> C[Discovered Endpoints]
@@ -64,5 +65,6 @@ graph TD
     F -->|No| H[Manual Verification]
     G --> I[Report Generation]
     H --> I
+```
 
 
