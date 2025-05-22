@@ -4,52 +4,65 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Selenium](https://img.shields.io/badge/Testing-Selenium-yellowgreen?logo=selenium)
 
-An intelligent web vulnerability scanner combining AI analysis with dynamic crawling and fuzzing techniques.
+> An intelligent web vulnerability scanner combining AI analysis with dynamic crawling and fuzzing techniques.
+
+---
 
 ## 🚀 Features
 
-- **AI-Powered Validation** (OpenAI GPT-3.5-turbo integration)
-- **Smart Dynamic Crawling** (Selenium WebDriver)
+- **AI-Powered Validation**  
+  → Uses OpenAI GPT-3.5 Turbo for advanced response analysis and vulnerability triage.  
+- **Smart Dynamic Crawling**  
+  → Selenium-based browser automation to explore all reachable paths.  
 - **OWASP Top 10 Coverage**:
-  - XSS, SQLi, RCE, SSRF, Path Traversal
-  - Command Injection, Security Misconfigurations
+  - Cross-Site Scripting (XSS)
+  - SQL Injection (SQLi)
+  - Remote Command Execution (RCE)
+  - Server-Side Request Forgery (SSRF)
+  - Path Traversal
+  - Command Injection
+  - Security Misconfigurations
 - **WAF Evasion Techniques**:
-  - Multiple encoding schemes
-  - Dynamic payload generation
+  - Dynamic payload obfuscation
+  - Multiple encoding strategies
 - **Comprehensive Reporting**:
-  - JSON/HTML output
-  - OWASP risk scoring
+  - Outputs in **JSON** and **HTML**
+  - Includes **OWASP Risk Scoring**
+
+---
 
 ## 📦 Installation
 
 ### Prerequisites
+
 - Python 3.7+
-- Chrome/Chromium browser
-- OpenAI API key
+- Google Chrome or Chromium
+- OpenAI API Key
+
+### Steps
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/yourusername/web-vuln-scanner.git
 cd web-vuln-scanner
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Set OpenAI API key
+# Set your OpenAI API Key
 echo "OPENAI_API_KEY=your_api_key_here" > .env
 
+---
 
+graph TD
+    A[Target URL] --> B[Selenium Crawler]
+    B --> C[Discovered Endpoints]
+    C --> D[Payload Injection]
+    D --> E[Response Analysis]
+    E --> F{AI Validation?}
+    F -->|Yes| G[OpenAI Verification]
+    F -->|No| H[Manual Verification]
+    G --> I[Report Generation]
+    H --> I
 
-python scanner.py -u https://example.com -d ./payloads/ -m 3
-
-{
-  "timestamp": "2023-11-15T14:30:00",
-  "vulnerabilities": [
-    {
-      "type": "Reflected XSS",
-      "owasp_score": 7.4,
-      "confidence": "High"
-    }
-  ]
-}
 
