@@ -67,4 +67,7 @@ graph TD
     H --> I
 ```
 
+```bash
+python scanner.py -u https://example.com -d ./payloads/ -m 3
+```
 
