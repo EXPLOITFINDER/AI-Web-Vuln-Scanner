@@ -37,3 +37,19 @@ pip install -r requirements.txt
 
 # Set OpenAI API key
 echo "OPENAI_API_KEY=your_api_key_here" > .env
+
+
+
+python scanner.py -u https://example.com -d ./payloads/ -m 3
+
+{
+  "timestamp": "2023-11-15T14:30:00",
+  "vulnerabilities": [
+    {
+      "type": "Reflected XSS",
+      "owasp_score": 7.4,
+      "confidence": "High"
+    }
+  ]
+}
+
