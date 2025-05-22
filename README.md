@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![OpenAI](https://img.shields.io/badge/Powered_by-OpenAI-purple?logo=openai)
 ![Selenium](https://img.shields.io/badge/Testing-Selenium-yellowgreen?logo=selenium)
 
 An intelligent web vulnerability scanner combining AI analysis with dynamic crawling and fuzzing techniques.
